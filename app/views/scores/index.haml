@@ -1,0 +1,15 @@
+%h2 Your Music
+
+= link_to 'Create new Score', new_score_path
+%br
+%br
+%table
+  - @scores.each do |score|
+    %tr
+      %td= link_to score.name, score
+      %td= link_to 'Delete', score, :method => :delete, :confirm => 'Are you sure you want to delete this Document?'
+
+%br
+
+- trash_count = Score.where(:trashed => true).count(:all)
+= link_to "Deleted Scores (#{trash_count})", trashes_path

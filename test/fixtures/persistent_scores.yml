@@ -1,0 +1,7 @@
+one:
+  name: MyString
+  input: MyText
+
+two:
+  name: MyString
+  input: MyText

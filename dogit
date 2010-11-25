@@ -1,0 +1,19 @@
+echo 
+echo adding files
+echo
+git add .
+
+echo 
+echo removing files
+echo
+git ls-files --deleted | xargs git rm
+
+echo
+echo committing
+echo
+git commit -m "`date "+%A, %B %-d %Y"`"
+
+echo
+echo pushing to github
+echo
+git push origin master

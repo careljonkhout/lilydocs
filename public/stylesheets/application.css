@@ -1,0 +1,148 @@
+#lilypond_errors {
+  width: 580px;
+}
+td {
+ padding-right:10px;
+}
+#user_nav_left {
+  float: left;
+}
+#user_nav_left a {
+  color: black;
+  text-decoration: none;
+}
+#user_nav_left a:hover {
+  color: red;
+}
+#ajax_loader_wrapper {
+  width: 580px;
+}
+#ajax_loader_wrapper img {
+  margin: 130px 0 0 180px;
+}
+a.home {
+  color: black;
+}
+.home_wrapper {
+  text-align: center;
+}
+button {
+  height:32px;
+}
+.footer {
+  text-align: center;
+}
+.run_lilypond {
+  width: 306px;
+  height: 32px;
+}
+#great_image_wrapper {
+  float: right;
+  margin-top: 15px;
+}
+.form_element {
+  margin: 3px;
+}
+#score_name {
+ width: 255px;
+}
+img.score {
+  border: 1px solid #666666;
+  margin: 3px auto;
+  padding: 4px;
+  width: 580px;
+  -moz-border-radius: 4px; 
+  -webkit-border-radius: 4px; 
+  border-radius: 4px; 
+}
+.flash {
+  clear: both;
+}
+#user_nav {
+  float: right;
+  text-align: right;
+  font-size:10pt;
+  margin:2px 3px;
+}
+a:hover {
+  color: red;
+}
+.title {
+  margin: 0 auto; width: 117px;
+}
+.box {
+  clear: both;
+  padding: 5px;
+}
+body {
+  background-color: #aaaaaa;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+  padding-top: 0;
+  margin: 0;
+}
+a img {
+  border: none;
+}
+a {
+  color: #0000FF;
+}
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+#container {
+  width: 950px;
+  height: 1000px;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 36px;
+  background-image:url('/images/site/container-left.png'), url('/images/site/container-right.png');
+  background-repeat:repeat-y;
+  background-position: left, right;
+}
+#flash_notice, #flash_error {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+#flash_error {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+.fieldWithErrors {
+  display: inline;
+}
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}

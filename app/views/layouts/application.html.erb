@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Lilydocs</title>
+    <%= stylesheet_link_tag 'application' %>
+    <%= javascript_include_tag :all %>
+    <%= csrf_meta_tag %> 
+  </head>
+  <body>
+    <div id="container">
+      <%- flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, :id => "flash_#{name}", :class => 'flash' %>
+      <%- end -%>
+      <div class="box">
+        <% unless current_page? scores_path %>
+          <% if user_signed_in? %>
+             <div id='user_nav_left'>
+               <%= link_to "Go to Your Lilypond Documents", scores_path %>
+             </div>
+          <% end %>
+        <% end %>
+        <% unless controller.devise_controller? %>
+          <div id="user_nav">
+            <% if user_signed_in? %>
+              Signed in as <b><%= current_user.email %></b>
+              <%= link_to 'Change email/password', edit_user_registration_path %>
+              <br>
+              Not you?
+              <%= link_to "Sign out", destroy_user_session_path %>
+            <% else %>
+              <%= link_to "Sign in", new_user_session_path %>
+              , No account yet?,
+              <%= link_to "Sign up", new_user_registration_path %>
+            <% end %>
+          </div>   
+        <% end %>
+        
+          <h1 class="title" >Lilydocs</h1>
+        </div>
+      <%= yield %>
+     <br>
+      <div class='footer'>
+        <%= link_to "About this site", info_static_pages_path unless current_page? info_static_pages_path %>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var uservoiceOptions = {
+	key: 'lilydocs',
+	host: 'lilydocs.uservoice.com', 
+	forum: '83731',
+	alignment: 'left',
+	background_color:'#525252', 
+	text_color: 'white',
+	hover_color: '#0066CC',
+	lang: 'en',
+	showTab: true
+      };
+      function _loadUserVoice() {
+	var s = document.createElement('script');
+	s.src = ("https:" == document.location.protocol ? "https://" : "http://") + "uservoice.com/javascripts/widgets/tab.js";
+	document.getElementsByTagName('head')[0].appendChild(s);
+      }
+      _loadSuper = window.onload;
+      window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };
+    </script>
+  </body>
+</html>

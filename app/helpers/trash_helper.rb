@@ -1,0 +1,2 @@
+module TrashHelper
+end

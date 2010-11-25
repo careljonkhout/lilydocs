@@ -1,0 +1,7 @@
+public/images/*.png
+public/pdf/*
+config/application.rb
+config/environments/production.rb
+log/development.log
+tmp
+misc/*

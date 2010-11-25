@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+Dir.chdir(File.dirname(__FILE__))
+`./cleanup`
+puts `rsync -av --exclude tmp/* . lilydocs.com:ror/lilydocs`
+puts `rsync -av --delete  ./app lilydocs.com:ror/lilydocs/app`

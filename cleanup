@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+Dir.chdir(File.dirname(__FILE__))
+# ignore errors about directories and rm processes that can't find any files to delete
+`rm public/images/* 2> /dev/null`
+`rm public/pdf/* 2> /dev/null`
+`rm log/* 2> /dev/null`
