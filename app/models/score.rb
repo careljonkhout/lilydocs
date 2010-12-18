@@ -2,9 +2,7 @@ class Score < ActiveRecord::Base
   include AbstractScore
   attr_accessible :name, :input, :trashed
 
-  def after_initialize
-    self.input ||= EXAMPLE_INPUT
-  end
+  after_initialize :set_input_to_example_input_if_empty
 
   before_save do |score|
     owner = score.owner

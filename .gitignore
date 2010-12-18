@@ -1,7 +1,11 @@
 public/images/*.png
 public/pdf/*
+public/midi/*
 config/application.rb
 config/environments/production.rb
-log/development.log
+log/*
 tmp
 misc/*
+dorsync
+spin
+deploy

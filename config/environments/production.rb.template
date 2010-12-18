@@ -48,5 +48,5 @@ Lilyonline::Application.configure do
   config.active_support.deprecation = :notify
 
   # Action-mailer hostname
-  config.action_mailer.default_url_options = { :host => 'lilydocs.com' }
+  config.action_mailer.default_url_options = raise 'You must configure config.action_mailer.default_url_options in config/environments/production.rb, line 51'
 end

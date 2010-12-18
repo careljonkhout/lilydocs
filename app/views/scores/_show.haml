@@ -1,6 +1,9 @@
-- if @score.exit_status == 0
+- if @score.exit_status == 0 && ! @score.empty?
   %form{ :action => "/pdf/#{@score.filename}.pdf", :method => 'get', :style => 'display:inline;' }
     %button Download PDF
+  - if @score.midi?
+    %form{ :action => "/midi/#{@score.filename}.midi", :method => 'get', :style => 'display:inline;' }
+      %button Download MIDI
   &nbsp;&nbsp;
   - if @score.image_files.length >= 2
     %button(onclick='previousPage()') Previous Page
@@ -8,9 +11,11 @@
   = javascript_tag "imageFiles = #{array_or_string_for_javascript @score.image_files}"
   %br
   %image.score(src='/#{@score.image_files[0]}' id='page')
-
 - elsif @score.exit_status != 0
   #lilypond_errors
     %h2 Something is wrong with your input!
     %strong Lilypond Output:
     = simple_format h(@score.lilypond_output)
+- elsif @score.empty?
+  #lilypond_errors
+    %h3 Lilypond didn't generate any output. This is probably because there aren't any notes in your input.

@@ -1,9 +1,2 @@
-./dorsync
-ssh root@lilydocs.com \
-" \
-  export rvm_path='/home/carel/.rvm'; \
-  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"; \
-  rvm 1.9.2; \
-  cd /home/carel/ror/lilydocs; \
-  /etc/init.d/thin restart \
-"
+./dorsync # will run cleanup before rsyncing
+./spin"

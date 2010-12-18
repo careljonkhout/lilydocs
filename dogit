@@ -16,4 +16,4 @@ git commit -m "`date "+%A, %B %-d %Y"`"
 echo
 echo pushing to github
 echo
-git push origin master
+git push github master

@@ -1,8 +1,7 @@
 class DemoScore < ActiveRecord::Base
   include AbstractScore
+
   attr_accessor :input
 
-  def after_initialize
-    self.input ||= EXAMPLE_INPUT
-  end
+  after_initialize :set_input_to_example_input_if_empty
 end

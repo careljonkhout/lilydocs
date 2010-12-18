@@ -1,8 +1,12 @@
-Lilypond in a webapp.
+Ruby on Rails app :: Lilypond in a webapp.
 
-Lilydocs is available for anyone to use at http://lilydocs.com ! 
+Lilydocs is available for anyone to use at http://lilydocs.com ! If you want tinker the "source" with it go ahead and clone this repository.
 
-If you want to host this app yourself, I will send some instuctions at your request.
+note: lilydocs is configured to always use https in the 'production' evironment.
+
+There are settings to be configured if you want to run this app.
+
+They are in config/environment.rb.template and config/environment/production.rb.template. look for the "raise" statements.
 
 carel (dot) jonkhout (at) gmail com 
 

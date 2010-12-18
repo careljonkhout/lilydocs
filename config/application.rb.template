@@ -46,8 +46,10 @@ module Lilyonline
     # this method is called in config.action_mailer.smtp_settings below
     def domain
       case Rails.env
-        when 'development' then 'your_development_domain'
+        when 'development' then 
+        raise 'you must configure config.action_mailer.smtp_settings[:domain] in config/application.rb line 49'
         when 'production'  then 'production_domain'
+        raise 'you must configure config.action_mailer.smtp_settings[:domain] in config/application.rb line 52'
       end
     end
 
@@ -55,8 +57,10 @@ module Lilyonline
       :address              => "smtp.gmail.com",
       :port                 => 587,
       :domain               => domain,
-      :user_name            => 'XXXXXX',
-      :password             => 'XXXXXX',
+      :user_name            => 
+      raise 'you must configure config.action_mailer.smtp_settings[:user_name] in config/application.rb line 60',
+      :password             => 
+      raise 'you must configure config.action_mailer.smtp_settings[:password] in config/application.rb line 62',
       :authentication       => 'plain',
       :enable_starttls_auto => true  }
   end
