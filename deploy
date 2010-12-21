@@ -1,2 +1,0 @@
-./dorsync # will run cleanup before rsyncing
-./spin

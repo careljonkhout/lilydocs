@@ -1,9 +1,0 @@
-ssh root@lilydocs.com \
-" \
-  export rvm_path='/home/carel/.rvm'; \
-  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"; \
-  rvm 1.9.2; \
-  cd /home/carel/ror/lilydocs; \
-  rm tmp/pids/thin.3000.pid; \
-  /etc/init.d/thin start \
-"

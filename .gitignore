@@ -6,6 +6,4 @@ config/environments/production.rb
 log/*
 tmp
 misc/*
-dorsync
-spin
-deploy
+s/*

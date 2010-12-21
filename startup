@@ -1,6 +1,0 @@
-#!/bin/bash
-rvm_path='/home/carel/.rvm'
-[[ -s "/home/carel/.rvm/scripts/rvm" ]] && . "/home/carel/.rvm/scripts/rvm"
-killall thin
-rvm 1.9.2
-thin start -e production -p 80 -d
