@@ -3,7 +3,6 @@ Lilyonline::Application.routes.draw do
 
   resources :scores, :except => [:edit, :create]
   resources :demo_scores, :only => [:index, :create], :path => :demo
-  resource :info, :only => :show
 
   root :controller => 'static_pages', :action => 'home'
 

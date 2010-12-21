@@ -8,7 +8,9 @@
   %p
     As indicated by "\version" statement you'll see when you create a new document, Lilydocs
     is currently using lilypond 2.12.3.
-
+  %p
+    If you want to tinker with "source code", see 
+    %a(href='https://github.com/careljonkhout/lilydocs') The lilydocs repository on github.
   %p
     This site was created by Carel Jonkhout.
   %p
@@ -18,3 +20,7 @@
         %a(href='http://lilypond.org/') the Lilypond website
       %li
         %a(href='http://en.wikipedia.org/wiki/GNU_LilyPond') GNU Lilypond article on Wikipedia
+  - if current_user && current_user.email == 'carel.jonkhout@gmail.com'
+    %h3 
+      Number of users:
+      = User.count

@@ -1,7 +1,0 @@
-one:
-  input: MyText
-  lilypond_output: MyText
-
-two:
-  input: MyText
-  lilypond_output: MyText
