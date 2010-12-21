@@ -20,7 +20,7 @@
         %a(href='http://lilypond.org/') the Lilypond website
       %li
         %a(href='http://en.wikipedia.org/wiki/GNU_LilyPond') GNU Lilypond article on Wikipedia
-  - if current_user && current_user.email == 'carel.jonkhout@gmail.com'
+  - if current_user && current_user.id =  1
     %h3 
       Number of users:
       = User.count
