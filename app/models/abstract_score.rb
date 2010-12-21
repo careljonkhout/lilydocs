@@ -8,7 +8,7 @@ module AbstractScore
 
         \\relative c'' { c d e f }
       END_OF_EXAMPLE_INPUT
-      self.input = example_input.sub(/^\ */, '') #remove spaces at start of each line
+      self.input = example_input.gsub(/^\ */, '') #remove spaces at start of each line
     end
   end
 
@@ -20,8 +20,8 @@ module AbstractScore
 
     raw_lilypond_output = `lilypond --png --pdf '#{filename}.ly' 2>&1; echo $?`
     self.exit_status = raw_lilypond_output.split("\n").last.to_i
-    self.lilypond_output = raw_lilypond_output.sub(/..\z/m, '')
-      # \z matches end of string, 'm' option lets dots match newlines
+    self.lilypond_output = raw_lilypond_output.sub(/\d+\n\z/, '')
+      # \z matches end of string
     `mv #{filename}*.png #{Rails.root.to_s}/public/images/`
     @empty = `mv #{filename}.pdf  #{Rails.root.to_s}/public/pdf/; echo $?` =~ /1/
     @midi = `[ -f  #{filename}.midi ] && mv #{filename}.midi #{Rails.root.to_s}/public/midi/; echo $?` =~ /0/
