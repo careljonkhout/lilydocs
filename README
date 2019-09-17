@@ -1,8 +1,10 @@
-Ruby on Rails app :: Lilypond in a webapp.
+Very basic ruby on rails app that hosts Lilypond as webapp.
 
-Lilydocs is available for anyone to use at http://lilydocs.com ! If you want tinker the "source" with it go ahead and clone this repository.
+This app has not been run (as far a I know), and I have not maintained  since 2012.
 
-note: lilydocs is configured to always use https in the 'production' evironment.
+!!!!!!! Github reports a severe vulnarability in the version of the "devise" gem this app uses. !!!!!!
+
+lilydocs is configured to always use https in the 'production' evironment.
 
 There are settings to be configured if you want to run this app.
 
